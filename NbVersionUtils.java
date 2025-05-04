@@ -39,14 +39,12 @@ public final class NbVersionUtils {
 
     /**
      * Determines the proper separator between version components.
-     * For French ("fr") and Russian ("ru") locales, uses the SMS prefix delimiter;
-     * otherwise, uses a dot (".").
+     * Currently always returns a dot (".").
      *
      * @return the version separator string
      */
     private static String getVersionSeparator() {
-        String language = Locale.getDefault().getLanguage();
-        return ("fr".equals(language) || "ru".equals(language)) ? ":" : ".";
+        return ".";
     }
 
     /**
